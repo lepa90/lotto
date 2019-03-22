@@ -1,0 +1,31 @@
+
+podajLiczby =input("podaj 6 liczb: ")
+
+otrzymaneLiczby =podajLiczby.split(" ")
+print(otrzymaneLiczby)
+
+liczby = []
+for i in otrzymaneLiczby:
+    liczby.append(int(i))
+
+print(liczby)
+x = len(liczby)
+print(x)
+print(x)
+if x == 6:
+    print("li")
+
+else:
+    print("asdf")
+
+for n in range(len(liczby)-1):
+
+    if(liczby[n]==liczby[n+1]):
+        print("liczby sie powtarzaja")
+    else:
+        print("liczby sie niepowtarzaja")
+        break
+
+
+
+
