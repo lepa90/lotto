@@ -1,0 +1,33 @@
+import random
+o=0
+while(o<1):
+
+    podajLiczby = input("podaj 6 liczb: ")
+    otrzymaneLiczby = podajLiczby.split(" ")
+    liczby = []
+
+    for i in otrzymaneLiczby:
+        liczby.append(int(i))
+        x = len(liczby)
+    if x == 6:
+        print("liczb jest 6")
+    else:
+        print("podaj wlasciwa ilosc liczb")
+
+    for n in range(len(liczby) - 1):
+        if (liczby[n] == liczby[n + 1]):
+            print("liczby sie powtarzaja")
+            break
+        else:
+            print("liczby sie niepowtarzaja")
+            break
+
+
+    losowe = random.sample(range(30), 6)
+    print("Wylosowane liczby to: ",losowe)
+    wynik = []
+
+    for h in range(6):
+        if (liczby[h] == losowe[h]):
+            wynik.append(liczby[h])
+    print("trafiles nastepujace liczby: ", wynik)
