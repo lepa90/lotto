@@ -1,0 +1,60 @@
+# zmodyfikowac projekt tak aby zmienic splitaO(wyrzucic)
+
+
+class lotto:
+    plik = open('lotto.txt', 'a+')
+    plik.seek(0)
+    tekst = plik.read()
+
+    tekstPodzielony = tekst.split('\n')
+    dataAidi1 = []
+    data = []
+    tekstIdPetla1 = []
+    numer = []
+    liczby = []
+    data = []
+    data1 = []
+    dataStr = []
+    s=";"
+
+    glowneLiczby = []
+    for i in tekstPodzielony:
+        tekstIdPetla = i.split(";", 1)
+        tekstIdPetla1.extend(tekstIdPetla)
+
+    for i in tekstPodzielony:
+        dataAidi = i.split(";", 9)
+
+        numer.append(dataAidi[0])
+        data.extend(dataAidi[1:4])
+        liczby.extend(dataAidi[5:10])
+
+
+    dataStr=str(data)
+    numerStr=str(numer)
+    liczbyStr=str(liczby)
+    dataKoncowa = []
+    for j in range(len(data)):
+        for i in range(0,3):
+            dataKoncowa=data[i]
+
+            print(dataKoncowa)
+
+
+
+
+
+    # dicPetla={1:'pon',2:'wt',3:'sroda'}
+    # for i in range(len(data):
+    # dicPetla[i]=data
+    # print(dicPetla)
+
+    # dicPetla.update(dic.keys{i})
+    # print(tekstIdPetla1)
+
+# s = ";".join(li)
+# co_druga = wynikiId # ['klucz', 'klucz1', 'klucz2']
+# co_druga_od_drugiej = wynikiBezId  # ['wartosc', 'wartosc1']
+# pary = zip(co_druga, co_druga_od_drugiej)
+# slownik = dict(pary)
+# print(slownik)
