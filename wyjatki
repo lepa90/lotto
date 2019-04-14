@@ -1,0 +1,17 @@
+def pobierz(a,b):
+    a=input()
+    b=input()
+def podziel():
+    c=a/b
+    return c
+
+try:
+  podziel()
+
+except ZeroDivisionError:
+    print('niedziel przez zero')
+else:
+    print('poprawne wywolanie')
+
+pobierz()
+podziel()
