@@ -1,0 +1,58 @@
+class hislotto:
+
+    def _init__(self, l1, l2):
+        self.klucz = l1
+        self.cyfry = l2
+
+    def pokazLiczby(self):
+        print(self.cyfry)
+
+
+class lotto(hislotto):
+    tekst = open('lotto.txt','r+')
+    tekst.seek(0)
+    lotto = tekst.read()
+
+    liczby=lotto.split('\n')
+    linia=[]
+    slownikKoncowy=[]
+    klucz1 = []
+    cyfry1 = []
+    slownik=[]
+    slownik1=[]
+    klucz = []
+
+    for i in liczby:
+       linia.append(i)
+
+    for i in range(len(linia)):
+        podzielona=linia[i].split(";")
+
+        dzien = podzielona[1]
+        miesiac = podzielona[2]
+        rok = podzielona[3]
+
+        print(dzien)
+        print(miesiac)
+        print(rok)
+
+        klucz = dzien + miesiac + rok
+        cyfry = podzielona[4:10]
+
+        slownik={klucz:cyfry}
+        print(slownik)
+        slownik1.append(slownik)
+
+    print(slownik1)
+
+    x=input()
+
+
+    print(x)
+    print(slownik1[x])
+    if x==klucz:
+        print(l1)
+    else:
+        print("zla wartosc")
+
+
